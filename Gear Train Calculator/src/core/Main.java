@@ -19,7 +19,7 @@ public class Main {
 			speedFactor = 1.33;
 		else
 			speedFactor = 0.84;
-		int inputSpeed = speedFactor*teamNum;
+		double inputSpeed = speedFactor*teamNum;
 
 
 	}
