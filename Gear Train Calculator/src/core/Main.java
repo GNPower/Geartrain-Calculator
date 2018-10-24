@@ -27,7 +27,7 @@ public class Main {
   		Reader.readConstraints("./res/constraints.txt");
 		Constants.getConstants().printConstants();
     
-		System.out.println("Hello Graham. This is a test.")
+		System.out.println("Hello Graham. This is a test.");
 	}
 
 }
