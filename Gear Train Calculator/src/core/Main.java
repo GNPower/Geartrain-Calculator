@@ -1,5 +1,8 @@
 package core;
 
+import core.files.Constants;
+import core.files.Reader;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -21,7 +24,10 @@ public class Main {
 			speedFactor = 0.84;
 		double inputSpeed = speedFactor*teamNum;
 
-
+  		Reader.readConstraints("./res/constraints.txt");
+		Constants.getConstants().printConstants();
+    
+		System.out.println("Hello Graham. This is a test.")
 	}
 
 }
