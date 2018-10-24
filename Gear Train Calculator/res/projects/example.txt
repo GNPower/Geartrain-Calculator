@@ -1,0 +1,51 @@
+#This is an example of how to make a project file, note # indicates a comment and is not necessary
+#Note: all dimensions in this file are defined in millimeters, all positions are defined as values between 0 and 1
+
+#keyword 'design' indicates the beginning of a project designs specifications, followed by the design name\
+#Note: more than one design can be written to a project file
+
+design example
+
+#the size of the chassis is the dimensions of the prosthetic arm given, x and y values are separated by commas
+chassis-size = 100,100
+
+#the position of Landmark One, the location of the motor on your chassis in terms of x and y
+#Note: since this must be along the side of the chassis only one value may be above zero
+landmark1_location = 90,0
+#the direction of rotation of Landmark One, either 'CW' or 'CCW' will default to 'CW' in invalid input
+landmark1_direction = CW
+#the rotation speed of Landmark One in rotations per second
+landmark1_rotation = 0.125
+
+#the position of Landmark Two, the location of the index finger joint on your chassis in terms of x and y
+#Note: since this must be along the side of the chassis only one value may be above zero
+landmark2_location = 0,90
+#the direction of rotation of Landmark Two, either 'CW' or 'CCW' will default to 'CCW' in invalid input
+landmark2_direction = CCW
+#the rotation speed of Landmark Two in rotations per second
+landmark2_rotation = 0.20
+
+#the position of Landmark Three, the location of the thumb joint on your chassis in terms of x and y
+#Note: since this must be along the side of the chassis only one value may be above zero
+landmark3_location = 90,0
+#the direction of rotation of Landmark Three, either 'CW' or 'CCW' will default to 'CCW' in invalid input
+landmark3_direction = CW
+#the rotation speed of Landmark Three in rotations per second
+landmark3_rotation = 0.18
+#the downward offset of Landmark Three, use this if the thumb joint does not lie in the same xy-plane as the thumb and motor
+landmark3_offset = 15
+
+#the diameter of the functional workspace the fingers must meet
+functional_diameter = 35
+#the downward offset from Landmark Two the center of the functional workspace is located
+functional_offset2 = 65
+#the forward offset from Landmark Three the center of the functional workspace is located
+#Note: set as -1 if the functional workspace is located directly below Landmark Two
+functional_offset3 = -1
+
+#the keyword indicating the end of a designs specifications
+#Note: only necessary is more than one design share the same project file
+end
+
+
+
