@@ -132,16 +132,20 @@ public class Reader {
 					specs.get(specsIndex).getLandmark3().setZ(-Integer.valueOf(tokens[1]));
 				}
 				if (tokens[0].equals("functional_diameter")) {
-					
+					specs.get(specsIndex).setWorkspace_diameter(Integer.valueOf(tokens[1]));
 				}
 				if (tokens[0].equals("functional_offset2")) {
-					
+					specs.get(specsIndex).setLm1_offset(Integer.valueOf(tokens[1]));
 				}
 				if (tokens[0].equals("functional_offset3")) {
-					
+					int data = Integer.valueOf(tokens[1]);
+					if(data == -1)
+						specs.get(specsIndex).setLm2_offset((specs.get(specsIndex).getLandmark3().sub(specs.get(specsIndex).getLandmark2())).length());
+					else
+						specs.get(specsIndex).setLm2_offset(data);
 				}
 				if (tokens[0].equals("end")) {
-					
+					specsIndex++;
 				}
 			}
 		} catch (FileNotFoundException e) {
