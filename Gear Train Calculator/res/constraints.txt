@@ -1,0 +1,37 @@
+#This file contains the set constraints for the design of the prosthetic, a # indicates a comment
+
+#This limits how far above the chassis center (in mm) a gear can extend, effectively the gears maximum radius
+z_axis_range = 30
+
+#this limits the maximum amount of gear trains the design may have
+train_limit = 10
+
+#this limits the maximum amount of gears the design may have
+gear_limit = 20
+
+#this indicates the speed of the 3D printer to be used to print the components (in cubic millimeters per minute)
+print_speed = 5
+
+#this limits the amount of time the design may take to print (in hours)
+print_time_limit = 3
+
+#WARNING: Do not change the criteria below unless you know exactly what you are doing
+#Changing any of the data below incorrectly could result in a system error with no traceable source
+
+sys_data_lims
+{
+	output_config_result=.ipt
+	output_config_display=.txt
+	single_function_runtime=15000
+	max_dynamic_functions=300
+}
+
+sys_render_lims
+{
+	#NA: to be implemented later
+}
+
+sys_error_lims
+{
+	#NA: to be implemented later
+}
