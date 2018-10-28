@@ -67,6 +67,7 @@ public class Reader {
 	public void readSpecifications(String... files) {
 		for (String file : files)
 			createSpecification(file);
+		
 	}
 
 	private void createSpecification(String file) {
@@ -190,5 +191,9 @@ public class Reader {
 		result.toArray(res);
 
 		return res;
+	}
+
+	public ArrayList<Specifications> getSpecifications() {
+		return specs;
 	}
 }

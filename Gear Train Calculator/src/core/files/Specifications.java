@@ -10,7 +10,7 @@ public class Specifications {
 	private Vector3f landmark1, landmark2, landmark3;
 	private Constants.Direction dir1, dir2, dir3;
 	private float speed1, speed2, speed3;
-	private float workspace_diameter, lm1_offset, lm2_offset;
+	private float workspace_diameter, lm2_offset, lm3_offset;
 	
 	public Specifications(String name) {
 		this.setName(name);
@@ -105,19 +105,19 @@ public class Specifications {
 	}
 
 	public float getLm1_offset() {
-		return lm1_offset;
-	}
-
-	public void setLm1_offset(float lm1_offset) {
-		this.lm1_offset = lm1_offset;
-	}
-
-	public float getLm2_offset() {
 		return lm2_offset;
 	}
 
+	public void setLm1_offset(float lm1_offset) {
+		this.lm2_offset = lm1_offset;
+	}
+
+	public float getLm2_offset() {
+		return lm3_offset;
+	}
+
 	public void setLm2_offset(float lm2_offset) {
-		this.lm2_offset = lm2_offset;
+		this.lm3_offset = lm2_offset;
 	}
 
 	public String getName() {
@@ -126,5 +126,32 @@ public class Specifications {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		String d1, d2, d3;
+		if(dir1 == Constants.Direction.CW)
+			d1 = "CW";
+		else
+			d1 = "CCW";
+		if(dir2 == Constants.Direction.CW)
+			d2 = "CW";
+		else
+			d2 = "CCW";
+		if(dir3 == Constants.Direction.CW)
+			d3 = "CW";
+		else
+			d3 = "CCW";
+		
+		return "\n\n" + name + " Specifications:\n\tChassis Size: " + chassis_size.toString() + 
+				"\n\n\tWorkspace:\n\t\tDiameter: " + workspace_diameter + 
+				"\n\t\tLandmark Two Offset: " + lm2_offset + "\n\t\tLandmark Three Offset: " +
+				lm3_offset + "\n\n\tLandmark One:\n\t\tLocation: " + landmark1.toString() + 
+				"\n\t\tRotation: " + d1 + "\n\t\tSpeed: " + speed1 + 
+				" rps\n\n\tLandmark Two:\n\t\tLocation: " + landmark2.toString() +
+				"\n\t\tRotation: " + d2 + "\n\t\tSpeed: " + speed2 +
+				" rps\n\n\tLandmark Three:\n\t\tLocation: " + landmark3.toString() +
+				"\n\t\tRotation: " + d3 + "\n\t\tSpeed: " + speed3 + "\n\n--- End Of Specifications ---";
 	}
 }

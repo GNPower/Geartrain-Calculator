@@ -91,6 +91,10 @@ public class Vector2f {
 	public Vector2f div(float r) {
 		return new Vector2f(this.x / r, this.y / r);
 	}
+	
+	public String toString() {
+		return "[" + this.x + "," + this.y + "]";
+	}
 
 	public float getX() {
 		return x;
