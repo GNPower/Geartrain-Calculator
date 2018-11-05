@@ -1,8 +1,6 @@
 package core;
 
-import core.algorithm.Calculator;
-import core.files.Constants;
-import core.files.Reader;
+import core.algorithm.Calculator2;
 
 public class Main {
 
@@ -30,6 +28,8 @@ public class Main {
 //		
 //		System.out.println("Hello Graham. This is a test.");
 		
-		Calculator calc = new Calculator("./res/constraints.txt", "./res/projects/example.txt");
+		Calculator2 calc = new Calculator2("./res/constraints.txt", "./res/projects/example.txt");
+		calc.loadData();
+		calc.design(1);
 	}
 }

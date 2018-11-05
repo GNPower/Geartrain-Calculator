@@ -23,7 +23,7 @@ landmark2_location = 0,90
 #the direction of rotation of Landmark Two, either 'CW' or 'CCW' will default to 'CCW' in invalid input
 landmark2_direction = CCW
 #the rotation speed of Landmark Two in rotations per second
-landmark2_rotation = 0.20
+landmark2_rotation = 2.0615
 
 #the position of Landmark Three, the location of the thumb joint on your chassis in terms of x and y
 #Note: since this must be along the side of the chassis only one value may be above zero

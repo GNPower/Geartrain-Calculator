@@ -1,6 +1,8 @@
 package core.files;
 
 public class Constants {
+	
+	public static final int DECIMAL_ACCURACY = 3;
 
 	private int z_axis_range, max_trains, max_gears, max_print_time, print_speed;
 	private String imageOutput, dataOutput;

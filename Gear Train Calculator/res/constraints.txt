@@ -4,7 +4,7 @@
 z_axis_range = 30
 
 #this limits the maximum amount of gear trains the design may have
-train_limit = 10
+train_limit = 5
 
 #this limits the maximum amount of gears the design may have
 gear_limit = 20

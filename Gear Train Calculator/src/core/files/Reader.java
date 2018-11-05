@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import core.algorithm.Util;
 import core.math.Vector2f;
 import core.math.Vector3f;
 
@@ -27,7 +28,7 @@ public class Reader {
 			String line;
 			while ((line = reader.readLine()) != null) {
 				String[] tokens = line.split("=| |\t");
-				tokens = removeEmptyStrings(tokens);
+				tokens = Util.removeEmptyStrings(tokens);
 
 				if (tokens.length == 0 || tokens[0].startsWith("#"))
 					continue;
@@ -80,7 +81,7 @@ public class Reader {
 			String line;
 			while ((line = reader.readLine()) != null) {
 				String[] tokens = line.split("=| |\t|,");
-				tokens = removeEmptyStrings(tokens);
+				tokens = Util.removeEmptyStrings(tokens);
 
 				if (tokens.length == 0 || tokens[0].startsWith("#"))
 					continue;
@@ -159,7 +160,7 @@ public class Reader {
 	private static void processData(List<String> data) {
 		for (String line : data) {
 			String[] tokens = line.split("=| |\t");
-			tokens = removeEmptyStrings(tokens);
+			tokens = Util.removeEmptyStrings(tokens);
 
 			if (tokens.length == 0 || tokens[0].startsWith("#"))
 				continue;
@@ -177,20 +178,6 @@ public class Reader {
 				Constants.getConstants().setMax_functions(Integer.valueOf(tokens[1]));
 			}
 		}
-	}
-
-	private static String[] removeEmptyStrings(String[] data) {
-		ArrayList<String> result = new ArrayList<String>();
-
-		for (int i = 0; i < data.length; i++) {
-			if (!data[i].equals(""))
-				result.add(data[i]);
-		}
-
-		String[] res = new String[result.size()];
-		result.toArray(res);
-
-		return res;
 	}
 
 	public ArrayList<Specifications> getSpecifications() {
